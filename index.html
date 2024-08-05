@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Emprego na área de formação</title>
+    <style>
+        body {
+            background-image: url('rioamazonico.png'); /* Caminho para a imagem de fundo */
+        }
+        p {
+            font-size: 23px; /* Aumenta o tamanho da fonte */
+            font-weight: ; /* Define o texto como negrito */
+        }
+    </style>
+</head>
+<body>
+    <h1>Previsão de Emprego na área de formação técnica</h1>
+    <p>
+        Dados para base de treino extraido de 845 questionários realizados em uma escola técnica do estado do Amazonas via google forms no primeiro 
+        semestre de 2021.<p>
+    <form action="/predict" method="post">
+        <label for="experience">Possui experiência na área de formação do curso?</label>
+        <select id="experience" name="experience" required>
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+        </select><br><br>
+        
+        <label for="employed">Está exercendo atividade remunerada no momento?</label>
+        <select id="employed" name="employed" required>
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+        </select><br><br>
+        
+        <label for="age">Qual sua faixa etária?</label>
+        <select id="age" name="age" required>
+            <option value="1">15 a 19 anos</option>
+            <option value="2">20 a 24 anos</option>
+            <option value="3">25 a 29 anos</option>
+            <option value="4">30 a 34 anos</option>
+            <option value="5">35 a 39 anos</option>
+            <option value="6">40 anos ou mais</option>
+        </select><br><br>
+        
+        <label for="education">Qual sua formação regular?</label>
+        <select id="education" name="education" required>
+            <option value="1">Ensino Médio Completo</option>
+            <option value="2">Superior Incompleto</option>
+            <option value="3">Superior Completo</option>
+        </select><br><br>
+        
+        <input type="submit" value="Prever">
+    </form>
+</body>
+</html>
