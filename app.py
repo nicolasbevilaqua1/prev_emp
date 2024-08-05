@@ -13,15 +13,10 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    print(request.method)  # Verifique o método da requisição
-    try:
-        experience = int(request.form['experience'])
-        employed = int(request.form['employed'])
-        age = int(request.form['age'])
-        education = int(request.form['education'])
-    except Exception as e:
-        print(f"Erro: {e}")
-        return "Erro ao processar a solicitação", 400
+    experience = int(request.form['experience'])
+    employed = int(request.form['employed'])
+    age = int(request.form['age'])
+    education = int(request.form['education'])
     
     # Criar um array com os dados
     input_data = np.array([[experience, employed, age, education]])
