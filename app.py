@@ -13,6 +13,7 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    # Receber os dados do formulário
     experience = int(request.form['experience'])
     employed = int(request.form['employed'])
     age = int(request.form['age'])
